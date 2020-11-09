@@ -43,6 +43,7 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+Functions inside of functions.  Being able to access functions from parent scope in the child scope.
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -64,9 +65,11 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+when you console.log{name} because name is being pulled from parent scope
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+Name will remain the same and number will always be rounded down. Number that is multiplied by 6 can change.
 c. What is the lexical scope of `newRoll`? 
-
+inside of the return.
 ### Task 2c - Exit Ticket
 
 Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/WjSzNh9gDrD8Xn8hw/enY3yPRP3nEm7E).
