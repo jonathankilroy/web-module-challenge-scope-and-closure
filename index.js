@@ -28,11 +28,12 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  
+  counter1 shows closure
   2. Which of the two uses a closure? How can you tell?
-  
+  counter1 because it contains a function nested within a function.
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+     when you dont want the counter function accesible to anything outside of countermaker
 */
 
 // counter1 code
@@ -61,11 +62,10 @@ Use the inning function below to do the following:
   For example: invoking inning() should return a numerical score value of 0, 1, or 2
 */
 
-function inning(/*Code Here*/){
-
-    /*Code Here*/
-
-}
+function inning(){
+  return Math.floor(Math.random() * 3);
+} 
+console.log(inning());
 
 /* Task 3: finalScore()
 Use the finalScore function below to do the following:
@@ -80,10 +80,12 @@ For example: invoking finalScore(inning, 9) might return this object:
 }
 */ 
 
-function finalScore(/*code Here*/){
-
-  /*Code Here*/
-
+function finalScore(inningCB,num){
+  return{
+    "home":inning(),
+    "Away":inning(), 
+  }
+ 
 }
 
 /* Task 4: 
